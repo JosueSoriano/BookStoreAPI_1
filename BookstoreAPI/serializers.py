@@ -13,3 +13,15 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
         model = Book
         fields = ('title', 'added_by_id', 'description', 'author', 'created_date')
 
+
+class BookTitleSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Book
+        fields = ('title', 'description')
+
+
+class AuthorNameSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Author
+        fields = ('name', )
+
